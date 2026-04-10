@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>About Us | Bluefinch Intelligence Infrastructure</title>
     <!-- Tailwind for the core content -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <!-- Global Styles for Header/Footer -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -82,19 +86,30 @@
         }
     </script>
     <style>
-        body { font-family: 'Manrope', sans-serif; }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
         .grid-bg {
             background-image: radial-gradient(circle, rgba(67, 70, 86, 0.15) 1px, transparent 1px);
             background-size: 24px 24px;
         }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         /* Custom Header Fix for Tailwind Conflict */
-        .navbar .container { max-width: 1200px; }
-        .navbar a { text-transform: none; }
+        .navbar .container {
+            max-width: 1200px;
+        }
+
+        .navbar a {
+            text-transform: none;
+        }
     </style>
 </head>
+
 <body class="bg-background text-on-background selection:bg-tertiary selection:text-on-tertiary">
 
     <!-- Navigation (Copied from index.html) -->
@@ -118,60 +133,73 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center pt-20 overflow-hidden bg-surface-container-lowest">
-        <div class="absolute inset-0 grid-bg opacity-30"></div>
-        <!-- Architectural Vertical Lines -->
-        <div class="absolute left-0 architectural-line hidden lg:block opacity-30"></div>
-        <div class="absolute left-1/4 architectural-line hidden lg:block opacity-30"></div>
-        <div class="absolute left-1/2 architectural-line hidden lg:block opacity-30"></div>
-        <div class="absolute left-3/4 architectural-line hidden lg:block opacity-30"></div>
-        <div class="absolute right-0 architectural-line hidden lg:block opacity-30"></div>
-        
-        <div class="container mx-auto px-12 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 bg-tertiary-container/20 border border-tertiary/10 rounded-full">
-                    <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-tertiary">Foundational Intelligence</span>
-                </div>
-                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-none text-on-surface">
-                    The Cognitive <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">Architect.</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-on-surface-variant font-light max-w-xl leading-relaxed">
-                    Redefining the Digital-First World through high-fidelity ERP infrastructure and intelligent software protocols.
-                </p>
-                <div class="flex space-x-4 pt-4">
-                    <div class="h-12 w-px bg-outline-variant/30"></div>
-                    <div class="text-xs uppercase tracking-widest font-semibold flex flex-col justify-center">
-                        <span class="text-on-surface">Global Scalability</span>
-                        <span class="text-on-surface-variant/60">Ready for Enterprise 5.0</span>
-                    </div>
-                </div>
+    <section class="relative min-h-[30vh] flex items-center pt-20 overflow-hidden bg-surface-container-lowest">
+    </section>
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <!-- Architectural Vertical Lines -->
+    <div class="absolute left-0 architectural-line hidden lg:block opacity-30"></div>
+    <div class="absolute left-1/4 architectural-line hidden lg:block opacity-30"></div>
+    <div class="absolute left-1/2 architectural-line hidden lg:block opacity-30"></div>
+    <div class="absolute left-3/4 architectural-line hidden lg:block opacity-30"></div>
+    <div class="absolute right-0 architectural-line hidden lg:block opacity-30"></div>
+
+    <div class="container mx-auto px-12 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+            <div
+                class="inline-flex items-center space-x-2 px-3 py-1 bg-tertiary-container/20 border border-tertiary/10 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-tertiary">Foundational
+                    Intelligence</span>
             </div>
-            <div class="relative group">
-                <div class="absolute -inset-4 bg-primary/10 blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
-                <div class="relative aspect-square rounded-lg overflow-hidden border border-outline-variant/20">
-                    <img class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:scale-105 transition-transform duration-1000" alt="high-tech data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF6gGdNtTS4umSOqDB1Hu1aI7Ny55TbwMmrvjnOxmooBbeAIqdbJ-CbICv6ik2CRTMizx8xECjJWuPbJ6xXVsbuaTPljDj3GI-1uY_Dr0EhGLVdzxwNYEkntYrcIYDMrRpl8OejRXrZcjlPA5Uk0E43GKVXEgUdbFtFBCtL_caJN2Q229v3CGoZl9cBt8uiA2F_yGxwPgA3g0mnKiASU3hCJULGdJvCF7dGakPdOGl238mHrm_Dx7MSHTDKnUlkEWUq9efm7HaF2M"/>
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-none text-on-surface">
+                The Cognitive <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">Architect.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-on-surface-variant font-light max-w-xl leading-relaxed">
+                Redefining the Digital-First World through high-fidelity ERP infrastructure and intelligent software
+                protocols.
+            </p>
+            <div class="flex space-x-4 pt-4">
+                <div class="h-12 w-px bg-outline-variant/30"></div>
+                <div class="text-xs uppercase tracking-widest font-semibold flex flex-col justify-center">
+                    <span class="text-on-surface">Global Scalability</span>
+                    <span class="text-on-surface-variant/60">Ready for Enterprise 5.0</span>
                 </div>
             </div>
         </div>
+        <div class="relative group">
+            <div
+                class="absolute -inset-4 bg-primary/10 blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700">
+            </div>
+            <div class="relative aspect-square rounded-lg overflow-hidden border border-outline-variant/20">
+                <img class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:scale-105 transition-transform duration-1000"
+                    alt="high-tech data center"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF6gGdNtTS4umSOqDB1Hu1aI7Ny55TbwMmrvjnOxmooBbeAIqdbJ-CbICv6ik2CRTMizx8xECjJWuPbJ6xXVsbuaTPljDj3GI-1uY_Dr0EhGLVdzxwNYEkntYrcIYDMrRpl8OejRXrZcjlPA5Uk0E43GKVXEgUdbFtFBCtL_caJN2Q229v3CGoZl9cBt8uiA2F_yGxwPgA3g0mnKiASU3hCJULGdJvCF7dGakPdOGl238mHrm_Dx7MSHTDKnUlkEWUq9efm7HaF2M" />
+            </div>
+        </div>
+    </div>
     </section>
 
     <!-- Who We Are (Light Section) -->
     <section class="py-32 bg-on-surface text-surface relative overflow-hidden">
-        
+
         <div class="container mx-auto px-12 relative z-10">
             <div class="max-w-4xl mx-auto space-y-12">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                     <div class="md:col-span-4">
-                        <h2 class="text-xs uppercase tracking-[0.4em] font-black text-primary-container border-l-4 border-primary-container pl-4">Who We Are</h2>
+                        <h2
+                            class="text-xs uppercase tracking-[0.4em] font-black text-primary-container border-l-4 border-primary-container pl-4">
+                            Who We Are</h2>
                     </div>
                     <div class="md:col-span-8 space-y-8">
                         <p class="text-4xl font-extrabold tracking-tight leading-tight">
                             We are the quiet architects behind the world's most resilient digital infrastructures.
                         </p>
                         <p class="text-xl text-surface/70 leading-relaxed font-light">
-                            At Bluefinch, we don't just build software; we engineer cognitive ecosystems. Our narrative is rooted in forward-thinking technology, combining deep ERP expertise with custom software development that adapts to the volatile rhythms of global commerce. We bridge the gap between raw data and actionable intelligence.
+                            At Bluefinch, we don't just build software; we engineer cognitive ecosystems. Our narrative
+                            is rooted in forward-thinking technology, combining deep ERP expertise with custom software
+                            development that adapts to the volatile rhythms of global commerce. We bridge the gap
+                            between raw data and actionable intelligence.
                         </p>
                     </div>
                 </div>
@@ -185,24 +213,32 @@
         <div class="container mx-auto px-12 relative z-10">
             <div class="grid lg:grid-cols-2 gap-24">
                 <div class="space-y-12">
-                    <div class="group p-8 bg-surface-container border border-outline-variant/10 rounded-lg hover:border-tertiary/30 transition-all">
+                    <div
+                        class="group p-8 bg-surface-container border border-outline-variant/10 rounded-lg hover:border-tertiary/30 transition-all">
                         <div class="material-symbols-outlined text-tertiary text-4xl mb-6">rocket_launch</div>
                         <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
                         <p class="text-on-surface-variant leading-relaxed">
-                            To empower businesses by installing high-performance digital nervous systems that automate complexity and catalyze exponential growth.
+                            To empower businesses by installing high-performance digital nervous systems that automate
+                            complexity and catalyze exponential growth.
                         </p>
                     </div>
-                    <div class="group p-8 bg-surface-container border border-outline-variant/10 rounded-lg hover:border-primary/30 transition-all">
+                    <div
+                        class="group p-8 bg-surface-container border border-outline-variant/10 rounded-lg hover:border-primary/30 transition-all">
                         <div class="material-symbols-outlined text-primary text-4xl mb-6">visibility</div>
                         <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
                         <p class="text-on-surface-variant leading-relaxed">
-                            To become the definitive global technology partner, setting the standard for how intelligence is integrated into the core architecture of every enterprise.
+                            To become the definitive global technology partner, setting the standard for how
+                            intelligence is integrated into the core architecture of every enterprise.
                         </p>
                     </div>
                 </div>
                 <div class="relative h-full min-h-[400px]">
-                    <img class="absolute inset-0 w-full h-full object-cover rounded-lg brightness-50 opacity-80 border border-outline-variant/20" alt="high-tech circuit board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE_MP6W32DD_v0jAxcpK-nrK7XOpBrahsEpD5O_-97DuMVWgZ5UQyDT0x1vdgRz72zddNbina-rpIklD5qayvQBe1G9RWLTmkTIIMwrMYFuyzos8nq0deqKAlsoibzuF-MsNK4wJ5UpiaFaFIgWYWy2BPNH02aAtf2H4PM7zgx0f8t-Jlg3fQGhGfTmTj5VoJ9ZPKg3I0bUq_VpO3ZupQ5p_e72UDZ_ncJwODf6FIxwQFaNkjs9GBNPaoc3Av1i7A90Q_0QwMrj2A"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+                    <img class="absolute inset-0 w-full h-full object-cover rounded-lg brightness-50 opacity-80 border border-outline-variant/20"
+                        alt="high-tech circuit board"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE_MP6W32DD_v0jAxcpK-nrK7XOpBrahsEpD5O_-97DuMVWgZ5UQyDT0x1vdgRz72zddNbina-rpIklD5qayvQBe1G9RWLTmkTIIMwrMYFuyzos8nq0deqKAlsoibzuF-MsNK4wJ5UpiaFaFIgWYWy2BPNH02aAtf2H4PM7zgx0f8t-Jlg3fQGhGfTmTj5VoJ9ZPKg3I0bUq_VpO3ZupQ5p_e72UDZ_ncJwODf6FIxwQFaNkjs9GBNPaoc3Av1i7A90Q_0QwMrj2A" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent">
+                    </div>
                 </div>
             </div>
         </div>
@@ -217,38 +253,50 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- ERP Solutions -->
-                <div class="md:col-span-2 group relative overflow-hidden bg-surface-container-low rounded-lg p-12 border border-outline-variant/5">
+                <div
+                    class="md:col-span-2 group relative overflow-hidden bg-surface-container-low rounded-lg p-12 border border-outline-variant/5">
                     <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                         <span class="material-symbols-outlined text-9xl">layers</span>
                     </div>
                     <div class="relative z-10 space-y-6 max-w-lg">
                         <h4 class="text-3xl font-bold">ERP Solutions</h4>
-                        <p class="text-on-surface-variant">Centralized data management for the modern era. We deploy scalable, modular ERP frameworks that serve as the backbone for operational excellence.</p>
+                        <p class="text-on-surface-variant">Centralized data management for the modern era. We deploy
+                            scalable, modular ERP frameworks that serve as the backbone for operational excellence.</p>
                         <ul class="space-y-3 text-sm font-semibold text-tertiary">
-                            <li class="flex items-center"><span class="material-symbols-outlined text-lg mr-2">check_circle</span> Multi-tenant Architecture</li>
-                            <li class="flex items-center"><span class="material-symbols-outlined text-lg mr-2">check_circle</span> Real-time Financial Orchestration</li>
+                            <li class="flex items-center"><span
+                                    class="material-symbols-outlined text-lg mr-2">check_circle</span> Multi-tenant
+                                Architecture</li>
+                            <li class="flex items-center"><span
+                                    class="material-symbols-outlined text-lg mr-2">check_circle</span> Real-time
+                                Financial Orchestration</li>
                         </ul>
                     </div>
                 </div>
                 <!-- Custom Software -->
-                <div class="group relative overflow-hidden bg-primary-container/10 rounded-lg p-12 border border-primary/10">
+                <div
+                    class="group relative overflow-hidden bg-primary-container/10 rounded-lg p-12 border border-primary/10">
                     <div class="relative z-10 h-full flex flex-col justify-between">
                         <div class="material-symbols-outlined text-primary text-5xl">code</div>
                         <div class="space-y-4">
                             <h4 class="text-2xl font-bold">Custom Software</h4>
-                            <p class="text-sm text-on-surface-variant leading-relaxed">Bespoke digital tools tailored to your unique architectural requirements.</p>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Bespoke digital tools tailored to
+                                your unique architectural requirements.</p>
                         </div>
                     </div>
                 </div>
                 <!-- AI Integration -->
-                <div class="md:col-span-3 group relative overflow-hidden bg-surface-container-high rounded-lg p-12 border border-outline-variant/10">
+                <div
+                    class="md:col-span-3 group relative overflow-hidden bg-surface-container-high rounded-lg p-12 border border-outline-variant/10">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="space-y-6">
                             <h4 class="text-3xl font-bold">Automation &amp; AI Integration</h4>
-                            <p class="text-on-surface-variant">We embed neural logic into your workflows, turning static processes into self-optimizing systems that learn and adapt in real-time.</p>
+                            <p class="text-on-surface-variant">We embed neural logic into your workflows, turning static
+                                processes into self-optimizing systems that learn and adapt in real-time.</p>
                         </div>
                         <div class="relative">
-                            <img class="rounded-lg opacity-60 grayscale hover:grayscale-0 transition-all duration-700" alt="AI network" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXhcodvX7VZzWbquEv-rTFsNYaBYIG4HZLzS2eZnRcEj9HX8CWf-YVeGd_c-jXSUrQZpdM0Xuj3jU93CJz8HN9rT6-i5JRrG3W4Cl7tTzmOxE3Ku-cD7aguOiuoRkoFTIXYEzb7eDO6bkBOKTgLDSw0g72qfPsFTZdP_yyykSj4Lw1fMW6V-LARTfxXLkM6ULrmcfedfW_1qz_2SagW_B7qfIBpxXFCwR4eS0mzylueh3aYq-_das1lsAXy-AwGpSbh3oFDy01QS8"/>
+                            <img class="rounded-lg opacity-60 grayscale hover:grayscale-0 transition-all duration-700"
+                                alt="AI network"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXhcodvX7VZzWbquEv-rTFsNYaBYIG4HZLzS2eZnRcEj9HX8CWf-YVeGd_c-jXSUrQZpdM0Xuj3jU93CJz8HN9rT6-i5JRrG3W4Cl7tTzmOxE3Ku-cD7aguOiuoRkoFTIXYEzb7eDO6bkBOKTgLDSw0g72qfPsFTZdP_yyykSj4Lw1fMW6V-LARTfxXLkM6ULrmcfedfW_1qz_2SagW_B7qfIBpxXFCwR4eS0mzylueh3aYq-_das1lsAXy-AwGpSbh3oFDy01QS8" />
                         </div>
                     </div>
                 </div>
@@ -262,33 +310,39 @@
         <div class="container mx-auto px-12 relative z-10">
             <div class="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8">
                 <h2 class="text-7xl font-black tracking-tighter max-w-md leading-none">The Bluefinch Edge.</h2>
-                <p class="text-xl font-light text-surface/60 max-w-sm border-l-2 border-primary-container pl-6">Calculated, Precise, and Built for Longevity.</p>
+                <p class="text-xl font-light text-surface/60 max-w-sm border-l-2 border-primary-container pl-6">
+                    Calculated, Precise, and Built for Longevity.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
                 <div class="space-y-4">
                     <div class="text-5xl font-black text-primary-container/20">01</div>
                     <h5 class="font-bold text-xl">Scalable</h5>
-                    <p class="text-sm text-surface/60 leading-relaxed">Infrastructure that grows as your data horizon expands.</p>
+                    <p class="text-sm text-surface/60 leading-relaxed">Infrastructure that grows as your data horizon
+                        expands.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="text-5xl font-black text-primary-container/20">02</div>
                     <h5 class="font-bold text-xl">User-friendly</h5>
-                    <p class="text-sm text-surface/60 leading-relaxed">Complex mechanics hidden behind elegant, intuitive interfaces.</p>
+                    <p class="text-sm text-surface/60 leading-relaxed">Complex mechanics hidden behind elegant,
+                        intuitive interfaces.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="text-5xl font-black text-primary-container/20">03</div>
                     <h5 class="font-bold text-xl">Tailored</h5>
-                    <p class="text-sm text-surface/60 leading-relaxed">No templates. Only custom-fit digital solutions.</p>
+                    <p class="text-sm text-surface/60 leading-relaxed">No templates. Only custom-fit digital solutions.
+                    </p>
                 </div>
                 <div class="space-y-4">
                     <div class="text-5xl font-black text-primary-container/20">04</div>
                     <h5 class="font-bold text-xl">Reliable</h5>
-                    <p class="text-sm text-surface/60 leading-relaxed">Mission-critical stability with 99.99% system uptime.</p>
+                    <p class="text-sm text-surface/60 leading-relaxed">Mission-critical stability with 99.99% system
+                        uptime.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="text-5xl font-black text-primary-container/20">05</div>
                     <h5 class="font-bold text-xl">Innovation</h5>
-                    <p class="text-sm text-surface/60 leading-relaxed">Always at the frontier of the next technological paradigm.</p>
+                    <p class="text-sm text-surface/60 leading-relaxed">Always at the frontier of the next technological
+                        paradigm.</p>
                 </div>
             </div>
         </div>
@@ -300,28 +354,33 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="relative order-2 lg:order-1">
                     <div class="absolute -inset-4 bg-tertiary/10 blur-2xl opacity-10"></div>
-                    <img class="relative rounded-lg border border-outline-variant/10 shadow-2xl" alt="server cabling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMONycEu3hDuqHnEXkEotY3me1liG3nZn-lCWCYS9b0fwPBw8ixGdvMzOBeQdaSCFyYctjKO5sor9tuw_NAWbDR73DLxJN3OOngblhh6ryXT06AMXFUg1QUDOXfMo_UUaKaI52NOa23YpgygSQ0hnvW_5Y4uRww8RmcUs7q9k2N95toxYSJC58z_hQkVfJe94JdxukISV6gZPrLu-FVJA_bzlG4Er2nNz79k5dnYon6yG2MMzenttCPWpUEY79AEXXLa7wqrzIQZE"/>
+                    <img class="relative rounded-lg border border-outline-variant/10 shadow-2xl" alt="server cabling"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMONycEu3hDuqHnEXkEotY3me1liG3nZn-lCWCYS9b0fwPBw8ixGdvMzOBeQdaSCFyYctjKO5sor9tuw_NAWbDR73DLxJN3OOngblhh6ryXT06AMXFUg1QUDOXfMo_UUaKaI52NOa23YpgygSQ0hnvW_5Y4uRww8RmcUs7q9k2N95toxYSJC58z_hQkVfJe94JdxukISV6gZPrLu-FVJA_bzlG4Er2nNz79k5dnYon6yG2MMzenttCPWpUEY79AEXXLa7wqrzIQZE" />
                 </div>
                 <div class="space-y-10 order-1 lg:order-2">
                     <h2 class="text-xs uppercase tracking-[0.4em] font-bold text-tertiary">Our Approach</h2>
                     <h3 class="text-5xl font-extrabold tracking-tight">A Collaborative Protocol.</h3>
                     <div class="space-y-8">
                         <div class="flex gap-6">
-                            <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/20 flex-shrink-0">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/20 flex-shrink-0">
                                 <span class="text-primary font-bold">A</span>
                             </div>
                             <div>
                                 <h6 class="font-bold text-lg mb-2">Customer-Centric Methodology</h6>
-                                <p class="text-on-surface-variant">We don't work for you; we work with you. Every sprint is a shared architectural milestone toward your final digital destination.</p>
+                                <p class="text-on-surface-variant">We don't work for you; we work with you. Every sprint
+                                    is a shared architectural milestone toward your final digital destination.</p>
                             </div>
                         </div>
                         <div class="flex gap-6">
-                            <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/20 flex-shrink-0">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/20 flex-shrink-0">
                                 <span class="text-tertiary font-bold">B</span>
                             </div>
                             <div>
                                 <h6 class="font-bold text-lg mb-2">Agile Intelligence</h6>
-                                <p class="text-on-surface-variant">Our process is iterative and transparent. We utilize rapid prototyping and neural feedback loops to refine the final product.</p>
+                                <p class="text-on-surface-variant">Our process is iterative and transparent. We utilize
+                                    rapid prototyping and neural feedback loops to refine the final product.</p>
                             </div>
                         </div>
                     </div>
@@ -334,10 +393,14 @@
     <section id="cta" class="cta-section section bg-darker" style="padding: 2rem 0 8rem 0;">
         <div class="container mx-auto px-12">
             <div class="cta-card fade-up-hook">
-                <h2 class="text-6xl font-black tracking-tighter leading-none mb-6 text-center">Smarter systems create<br>stronger businesses.</h2>
-                <p class="text-xl text-on-surface-variant/80 text-center mb-10">Are you ready to transform your enterprise architecture with<br>the logic of the future?</p>
+                <h2 class="text-6xl font-black tracking-tighter leading-none mb-6 text-center">Smarter systems
+                    create<br>stronger businesses.</h2>
+                <p class="text-xl text-on-surface-variant/80 text-center mb-10">Are you ready to transform your
+                    enterprise architecture with<br>the logic of the future?</p>
                 <div class="flex justify-center">
-                    <a href="mailto:info@bluefinchtech.com" class="px-8 py-4 bg-primary text-white font-bold rounded hover:bg-primary-light transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/20">Connect With Us</a>
+                    <a href="mailto:info@bluefinchtech.com"
+                        class="px-8 py-4 bg-primary text-white font-bold rounded hover:bg-primary-light transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/20">Connect
+                        With Us</a>
                 </div>
             </div>
         </div>
@@ -374,4 +437,5 @@
         window.addEventListener('load', toggleNavBackground);
     </script>
 </body>
+
 </html>

@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Preloader and Initial Body Scroll Lock
     const preloader = document.querySelector('.preloader');
-    
+
     // Only lock scroll if preloader exists
     if (preloader) {
         document.body.style.overflow = 'hidden';
-        
+
         setTimeout(() => {
             preloader.classList.add('loaded');
             document.body.style.overflow = ''; // Restore scrolling
@@ -39,16 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
+
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth'
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fade up animations on scroll (Intersection Observer)
     const fadeElements = document.querySelectorAll('.section-heading, .service-card, .features-list li, .check-list li, .tag, .fade-up-hook');
-    
+
     // Initial state setup for fade elements
     fadeElements.forEach(el => {
         el.style.opacity = '0';
@@ -91,55 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
-    let menuOpen = false;
+    const icon = mobileToggle.querySelector('i');
 
-    function openMenu() {
-        menuOpen = true;
-        navLinks.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.97);
-            backdrop-filter: blur(20px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2.5rem;
-            z-index: 9999;
-        `;
-        navLinks.querySelectorAll('a').forEach(a => {
-            a.style.cssText = 'font-size: 2rem; font-weight: 700; color: #ffffff;';
-        });
-        const icon = mobileToggle.querySelector('i');
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
-        document.body.style.overflow = 'hidden';
-    }
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
 
-    function closeMenu() {
-        menuOpen = false;
-        navLinks.style.cssText = '';
-        navLinks.querySelectorAll('a').forEach(a => {
-            a.style.cssText = '';
-        });
-        const icon = mobileToggle.querySelector('i');
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-        document.body.style.overflow = '';
-    }
-
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            if (menuOpen) {
-                closeMenu();
-            } else {
-                openMenu();
-            }
-        });
-    }
+        if (navLinks.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-xmark');
+            document.body.style.overflow = 'hidden';
+        } else {
+            icon.classList.replace('fa-xmark', 'fa-bars');
+            document.body.style.overflow = '';
+        }
+    });
 
     // Close mobile menu on link click
     if (navLinks) {
