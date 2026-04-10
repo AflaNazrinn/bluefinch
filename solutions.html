@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Solutions | Bluefinch Intelligence Infrastructure</title>
+    <!-- Tailwind for the core content -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .architect-grid {
+            background-image: radial-gradient(circle, #434656 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .architect-columns {
+            background-image: linear-gradient(to right, #434656 1px, transparent 1px);
+            background-size: 25% 100%;
+            opacity: 0.05;
+        }
+        
+        /* Brand Blue Standard */
+        .text-primary { color: #b0c6ff !important; }
+        .bg-primary { background-color: #b0c6ff !important; }
+        .border-primary { border-color: #b0c6ff !important; }
+        
+        /* Override Teal (#89f5ff) with Blue (#b0c6ff) */
+        .text-tertiary { color: #b0c6ff !important; }
+        .bg-tertiary-container\/20 { background-color: rgba(176, 198, 255, 0.1) !important; }
+        .border-tertiary\/20 { border-color: rgba(176, 198, 255, 0.2) !important; }
+        
+        .bg-gradient-to-r.from-primary.to-tertiary {
+            background-image: linear-gradient(to right, #2563eb, #60a5fa) !important;
+        }
+    </style>
+</head>
+<body class="bg-[#131314] text-[#e5e2e3] selection:bg-primary selection:text-on-primary">
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo_transparent.png" alt="Bluefinch Technology" class="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#hero">Home</a>
+                <a href="about.html">About</a>
+                <a href="solutions.html" class="active">Solutions</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="mobile-toggle">
+                <span class="menu-text uppercase text-[10px] tracking-[0.2em] font-bold opacity-70">Menu</span>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[819px] flex items-center justify-center overflow-hidden bg-[#0e0e0f]">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(67, 70, 86, 0.15) 1px, transparent 1px); background-size: 24px 24px;"></div>
+            <!-- Architectural Vertical Lines -->
+            <div class="absolute left-0 top-0 bottom-0 w-px bg-[#434656]/30 hidden lg:block"></div>
+            <div class="absolute left-1/4 top-0 bottom-0 w-px bg-[#434656]/30 hidden lg:block"></div>
+            <div class="absolute left-1/2 top-0 bottom-0 w-px bg-[#434656]/30 hidden lg:block"></div>
+            <div class="absolute left-3/4 top-0 bottom-0 w-px bg-[#434656]/30 hidden lg:block"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-px bg-[#434656]/30 hidden lg:block"></div>
+            <!-- Blue Glow -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2563eb]/10 rounded-full blur-[120px]"></div>
+            <div class="container mx-auto px-8 relative z-10 flex flex-col items-center text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-container/20 text-tertiary text-xs font-bold tracking-widest uppercase mb-8 border border-tertiary/20">
+                    <span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+                    Infrastructure 2.0
+                </div>
+                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter text-white mb-6 max-w-5xl leading-[0.95]">
+                    Empowering Businesses with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">Smart Technology</span>
+                </h1>
+                <p class="text-[#c3c5d9] text-xl max-w-2xl mb-12 font-light">
+                    Architecting the future of enterprise operations through high-fidelity software ecosystems and intelligent data frameworks.
+                </p>
+            </div>
+            <!-- Decorative Element -->
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1c1b1c] to-transparent"></div>
+        </section>
+
+        <!-- ERP Section (Dark) -->
+        <section class="py-24 bg-[#1c1b1c] relative overflow-hidden" id="ERP">
+            <div class="container mx-auto px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-tertiary font-bold tracking-widest uppercase text-xs">Core Systems</span>
+                        <h2 class="text-4xl font-bold text-white mt-4 mb-8 tracking-tight">Enterprise Resource Planning</h2>
+                        <p class="text-[#c3c5d9] text-lg mb-8 leading-relaxed">
+                            Our ERP solutions integrate every facet of your operation into a single, cohesive intelligent engine. No more data silos—just pure, actionable clarity.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                                <span class="text-[#e5e2e3]">Unified operational data architecture</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                                <span class="text-[#e5e2e3]">Automated cross-departmental reporting</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-tertiary">check_circle</span>
+                                <span class="text-[#e5e2e3]">Real-time resource allocation monitoring</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-[#2563eb]/20 to-[#60a5fa]/20 blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                        <img class="relative rounded-lg w-full aspect-video object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80" alt="Tech Workspace">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERP Details (Light/Readability Focus) -->
+        <section class="py-24 bg-white text-[#131314]">
+            <div class="container mx-auto px-8">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="p-8 border-l-2 border-[#e5e2e3]">
+                        <span class="material-symbols-outlined text-4xl mb-6">account_balance</span>
+                        <h3 class="text-2xl font-bold mb-4">Finance</h3>
+                        <p class="text-[#353436] font-medium">Automate complex ledgers and multi-currency transactions with precision-engineered algorithmic checks.</p>
+                    </div>
+                    <div class="p-8 border-l-2 border-[#e5e2e3]">
+                        <span class="material-symbols-outlined text-4xl mb-6">inventory_2</span>
+                        <h3 class="text-2xl font-bold mb-4">Inventory</h3>
+                        <p class="text-[#353436] font-medium">Dynamic supply chain tracking with predictive restocking alerts and warehouse flow optimization.</p>
+                    </div>
+                    <div class="p-8 border-l-2 border-[#e5e2e3]">
+                        <span class="material-symbols-outlined text-4xl mb-6">groups</span>
+                        <h3 class="text-2xl font-bold mb-4">Operations</h3>
+                        <p class="text-[#353436] font-medium">Align human capital with logistical requirements through intelligent scheduling and workload balancing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Software Section (Dark) -->
+        <section class="py-24 bg-[#131314] relative" id="Software">
+            <div class="container mx-auto px-8">
+                <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                    <div class="md:w-1/2">
+                        <span class="text-tertiary font-bold tracking-widest uppercase text-xs">Tailored Development</span>
+                        <h2 class="text-4xl font-bold text-white mt-4 mb-8 tracking-tight">Custom Software Engineering</h2>
+                        <p class="text-[#c3c5d9] text-lg mb-8 leading-relaxed">
+                            We don't just write code; we build digital assets. Our custom software is engineered to solve the specific bottlenecks of your unique enterprise architecture.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-[#1c1b1c] rounded-lg border border-[#434656]/10">
+                                <h4 class="text-tertiary font-bold mb-1">Microservices</h4>
+                                <p class="text-xs text-[#c3c5d9]">Decoupled, scalable modules.</p>
+                            </div>
+                            <div class="p-4 bg-[#1c1b1c] rounded-lg border border-[#434656]/10">
+                                <h4 class="text-tertiary font-bold mb-1">API-First</h4>
+                                <p class="text-xs text-[#c3c5d9]">Seamless external connectivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img class="rounded-lg w-full aspect-[4/3] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80" alt="Software Engineering">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Cloud Solutions (Light) -->
+        <section class="py-24 bg-white text-[#131314]" id="Cloud">
+            <div class="container mx-auto px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <img class="rounded-lg shadow-xl grayscale hover:grayscale-0 transition-all" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="Cloud Infrastructure">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6 tracking-tight">Cloud Infrastructure &amp; Security</h2>
+                        <p class="text-[#353436] text-lg mb-8 leading-relaxed">Secure, high-availability cloud deployments designed for massive data throughput and 99.99% uptime reliability.</p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 flex-shrink-0 bg-[#131314] text-white flex items-center justify-center rounded-lg">
+                                    <span class="material-symbols-outlined">shield_locked</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Zero-Trust Architecture</h4>
+                                    <p class="text-sm text-[#353436]">Security integrated into the very foundation of the data transit layer.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 flex-shrink-0 bg-[#131314] text-white flex items-center justify-center rounded-lg">
+                                    <span class="material-symbols-outlined">cloud_done</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Hybrid Integration</h4>
+                                    <p class="text-sm text-[#353436]">Seamlessly blend on-premise hardware with elastic cloud resources.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach -->
+        <section class="py-24 bg-[#dbe2f8] text-[#131314] border-t border-[#131314]/5">
+            <div class="container mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight uppercase tracking-widest">Our Architectural Approach</h2>
+                    <div class="w-24 h-1 bg-[#131314] mx-auto mt-4"></div>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="relative">
+                        <span class="text-5xl font-black text-[#131314]/10 absolute -top-4 -left-4">01</span>
+                        <div class="relative pt-8">
+                            <h4 class="font-bold mb-2">Discovery</h4>
+                            <p class="text-sm opacity-80">Deep analysis of current technical debt and operational friction points.</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span class="text-5xl font-black text-[#131314]/10 absolute -top-4 -left-4">02</span>
+                        <div class="relative pt-8">
+                            <h4 class="font-bold mb-2">Blueprint</h4>
+                            <p class="text-sm opacity-80">Designing the scalable system architecture and integration maps.</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span class="text-5xl font-black text-[#131314]/10 absolute -top-4 -left-4">03</span>
+                        <div class="relative pt-8">
+                            <h4 class="font-bold mb-2">Engineering</h4>
+                            <p class="text-sm opacity-80">Agile development cycles with continuous automated testing.</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span class="text-5xl font-black text-[#131314]/10 absolute -top-4 -left-4">04</span>
+                        <div class="relative pt-8">
+                            <h4 class="font-bold mb-2">Deployment</h4>
+                            <p class="text-sm opacity-80">Systemic migration with zero-downtime cutover strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Why Bluefinch -->
+        <section class="py-24 bg-gradient-to-br from-[#131314] via-[#1a1f35] to-[#0d1a2d] text-[#e5e2e3]">
+            <div class="container mx-auto px-8 max-w-5xl">
+                <h2 class="text-5xl font-black tracking-tighter mb-16 uppercase text-white">The Bluefinch Edge</h2>
+                <div class="space-y-12">
+                    <div class="flex items-start gap-8 border-b border-white/10 pb-8">
+                        <span class="text-3xl font-bold text-primary opacity-40">/01</span>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-white">Built for Intelligence</h3>
+                            <p class="text-lg text-[#c3c5d9]">Our systems aren't just tools; they are proactive participants in your business strategy, providing insights before you ask.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-8 border-b border-white/10 pb-8">
+                        <span class="text-3xl font-bold text-primary opacity-40">/02</span>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-white">Uncompromising Performance</h3>
+                            <p class="text-lg text-[#c3c5d9]">Latency is the enemy of enterprise. We engineer for sub-millisecond response times across the entire software stack.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-8 border-b border-white/10 pb-8">
+                        <span class="text-3xl font-bold text-primary opacity-40">/03</span>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-white">Legacy Integration</h3>
+                            <p class="text-lg text-[#c3c5d9]">We don't force you to start from zero. Our adapters bridge the gap between your legacy hardware and the future of cloud computing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <div class="copyright">
+                &copy; <span id="year">2026</span> Bluefinch. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

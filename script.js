@@ -91,19 +91,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
-    
+    let menuOpen = false;
+
+    function openMenu() {
+        menuOpen = true;
+        navLinks.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.97);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            z-index: 9999;
+        `;
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.style.cssText = 'font-size: 2rem; font-weight: 700; color: #ffffff;';
+        });
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        menuOpen = false;
+        navLinks.style.cssText = '';
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.style.cssText = '';
+        });
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+        document.body.style.overflow = '';
+    }
+
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-                document.body.style.overflow = 'hidden';
+            if (menuOpen) {
+                closeMenu();
             } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-                document.body.style.overflow = '';
+                openMenu();
             }
         });
     }
@@ -112,13 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navLinks) {
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                if (mobileToggle) {
-                    const icon = mobileToggle.querySelector('i');
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
+                if (menuOpen) {
+                    closeMenu();
                 }
-                document.body.style.overflow = '';
             });
         });
     }
