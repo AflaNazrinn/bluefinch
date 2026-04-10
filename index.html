@@ -43,12 +43,14 @@
             </a>
             <nav class="nav-links">
                 <a href="#hero">Home</a>
-                <a href="#about">Who We Are</a>
-                <a href="#services">Services</a>
-                <a href="#features">Features</a>
-                <a href="#contact" class="btn btn-nav">Get In Touch</a>
+                <a href="about.html">About</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
             </nav>
-            <div class="mobile-toggle"><i class="fa-solid fa-bars"></i></div>
+            <div class="mobile-toggle">
+                <span class="menu-text uppercase text-[10px] tracking-[0.2em] font-bold opacity-70">Menu</span>
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </header>
 
@@ -73,245 +75,221 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section bg-alt-1 bg-grid" style="padding: 5rem 0;">
+    <!-- Philosophy Section -->
+    <section id="about" class="philosophy section bg-offwhite bg-grid-light" style="padding: 5rem 0;">
         <div class="container">
-            <div class="container-split split-who-dark">
-                <!-- Left Column -->
-                <div class="who-title-col-dark">
-                    <span class="system-identity">SYSTEM IDENTITY</span>
-                    <h2 class="dark-who-headline">
-                        We are <strong>Software Architects.</strong> Beyond code, we build digital infrastructure that defines the pace of modern commerce.
-                    </h2>
-                </div>
-                <!-- Right Column -->
-                <div class="who-text-col-dark">
-                    <p class="dark-who-desc">
-                        BLUEFINCH doesn't just provide software; we engineer environments. Our methodology is rooted in architectural principles: stability, scalability, and aesthetic precision. Every solution is a custom-forged pillar for your organization's future.
-                    </p>
+            <div class="philosophy-box padding-4">
+                <div class="philosophy-split">
+                    <!-- Left Image -->
+                    <div class="philosophy-image-wrapper fade-up-hook">
+                        <img src="philosophy_v2.png" alt="Intelligence Architecture" class="phi-img">
+                    </div>
+                    <!-- Right Content -->
+                    <div class="philosophy-content">
+                        <h2 class="phi-title fade-up-hook">About Bluefinch</h2>
+                        <div class="phi-body-text">
+                            <p class="phi-lead fade-up-hook">
+                                Businesses today require more than just software — they need systems that think, adapt, and evolve.
+                            </p>
+                            <p class="phi-accent fade-up-hook">
+                                Bluefinch was built to deliver exactly that.
+                            </p>
+                            <p class="fade-up-hook">
+                                We specialize in developing unified ERP platforms and custom software solutions that bring together finance, operations, inventory, human resources, and supply chain into a single, intelligent ecosystem.
+                            </p>
+                            <p class="fade-up-hook">
+                                With a deep understanding of real-world business challenges, our solutions are engineered to be practical, scalable, and impactful — helping organizations reduce inefficiencies, cut costs, and improve decision-making.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services section bg-alt-2" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <section id="services" class="services section bg-alt-2 bg-grid" style="padding-top: 5rem; padding-bottom: 5rem;">
         <div class="container container-wide">
-            <!-- Modular Header -->
-            <div class="module-header">
+            <!-- Capability Header -->
+            <div class="module-header fade-up-hook">
                 <div class="module-header-left">
-                    <span class="module-label">MODULES</span>
-                    <h2 class="module-title">WHAT WE OFFER</h2>
-                </div>
-                <div class="module-header-right">
-                    <!-- Layer button removed -->
+                    <span class="module-label" style="color: #3b82f6; letter-spacing: 2px;">CORE CAPABILITIES</span>
+                    <h2 class="module-title">What We Deliver</h2>
                 </div>
             </div>
 
-            <!-- Module Rack (Grid) -->
-            <div class="module-rack">
-                <!-- Module 1 -->
-                <div class="module-card">
-                    <div class="module-top">
-                        <span class="module-num">01</span>
-                        <i class="fa-solid fa-layer-group module-bg-icon"></i>
-                    </div>
-                    <h3 class="module-name">ERP DEVELOPMENT</h3>
-                    <p class="module-desc">Custom-built enterprise cores designed for specific industry workflows.</p>
-                    <div class="module-line"></div>
+            <!-- Background Animated Elements -->
+            <div class="bg-animation-wrap">
+                <div class="bg-particle p1"></div>
+                <div class="bg-particle p2"></div>
+                <div class="bg-particle p3"></div>
+                <div class="bg-particle p4"></div>
+            </div>
+
+            <!-- Capability Grid -->
+            <div class="capability-grid">
+                <!-- Card 1: Centralize (Wide) -->
+                <div class="cap-card cap-wide fade-up-hook">
+                    <div class="cap-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                    <h3 class="cap-title">Centralize</h3>
+                    <p class="cap-desc">Eliminate data silos by converging all enterprise streams into a single source of truth. Real-time synchronization across global operations.</p>
                 </div>
-                <!-- Module 2 -->
-                <div class="module-card">
-                    <div class="module-top">
-                        <span class="module-num">02</span>
-                        <i class="fa-solid fa-code module-bg-icon"></i>
-                    </div>
-                    <h3 class="module-name">WEB APP DEV</h3>
-                    <p class="module-desc">Responsive high-end applications that provide seamless user experiences.</p>
-                    <div class="module-line"></div>
+                
+                <!-- Card 2: Automate (Narrow) -->
+                <div class="cap-card cap-narrow fade-up-hook">
+                    <div class="cap-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 class="cap-title">Automate</h3>
+                    <p class="cap-desc">Convert manual friction into autonomous workflows using proprietary AI models.</p>
                 </div>
-                <!-- Module 3 -->
-                <div class="module-card">
-                    <div class="module-top">
-                        <span class="module-num">03</span>
-                        <i class="fa-solid fa-cloud module-bg-icon"></i>
-                    </div>
-                    <h3 class="module-name">CLOUD INTEGRATION</h3>
-                    <p class="module-desc">Seamless data synchronization across global cloud infrastructures.</p>
-                    <div class="module-line"></div>
+
+                <!-- Card 3: Visibility (Narrow) -->
+                <div class="cap-card cap-narrow fade-up-hook">
+                    <div class="cap-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="cap-title">Visibility</h3>
+                    <p class="cap-desc">Real-time dashboards that provide tectonic-level insights into your business health.</p>
                 </div>
-                <!-- Module 4 -->
-                <div class="module-card">
-                    <div class="module-top">
-                        <span class="module-num">04</span>
-                        <i class="fa-solid fa-headset module-bg-icon"></i>
-                    </div>
-                    <h3 class="module-name">MAINTENANCE</h3>
-                    <p class="module-desc">Dedicated 24/7 technical support and continuous system optimization.</p>
-                    <div class="module-line"></div>
+
+                <!-- Card 4: Adaptability (Wide) -->
+                <div class="cap-card cap-wide fade-up-hook">
+                    <div class="cap-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3 class="cap-title">Adaptability</h3>
+                    <p class="cap-desc">Modular architecture designed to pivot as fast as your industry demands. No legacy dead-ends.</p>
+                    <i class="fa-solid fa-compass cap-watermark"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section (Engineered) -->
-    <section id="features" class="features section bg-alt-1 bg-grid" style="padding: 8rem 0;">
-        <div class="container container-split align-center" style="gap: 5rem;">
+    <!-- Intelligence Section (Cognitive Layer) -->
+    <section id="intelligence" class="intelligence section bg-light-grey bg-grid-light" style="padding: 8rem 0; overflow: hidden;">
+        <!-- Animated Background Elements -->
+        <div class="intel-bg-wrap">
+            <div class="intel-particle ip1"><i class="fa-solid fa-brain"></i></div>
+            <div class="intel-particle ip2"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="intel-particle ip3"><i class="fa-solid fa-microchip"></i></div>
+            <div class="intel-particle ip4"><i class="fa-solid fa-diagram-project"></i></div>
+        </div>
+        <div class="container container-split align-center" style="gap: 5rem; position: relative; z-index: 1;">
             <!-- Left Text Column -->
-            <div class="engine-text-col w-full">
-                <span class="engine-label">CORE ENGINE</span>
-                <h2 class="engine-headline">ENGINEERED<br>FEATURES</h2>
-                <div class="engine-feature-list">
-                    <div class="engine-item">
-                        <div class="engine-icon-box"><i class="fa-solid fa-database"></i></div>
-                        <div class="engine-item-content">
-                            <h4>CENTRALIZED DATA MANAGEMENT</h4>
-                            <p>Eliminate fragmentation. A single source of truth for every transaction, unit, and asset across the enterprise.</p>
-                        </div>
+            <div class="intel-text-col w-full">
+                <span class="intel-label fade-up-hook">THE COGNITIVE LAYER</span>
+                <h2 class="intel-headline fade-up-hook">Intelligence at the Core</h2>
+                <p class="intel-desc fade-up-hook">
+                    Our AI integration goes beyond simple chatbots. We embed predictive neural networks into the heart of your ERP, allowing for automated forecasting, anomaly detection, and smart resource allocation.
+                </p>
+                
+                <div class="intel-points">
+                    <div class="intel-point fade-up-hook" style="border-left: 3px solid #3b82f6;">
+                        <h4>Predictive</h4>
+                        <p>Anticipate inventory needs before they arise.</p>
                     </div>
-                    <div class="engine-item">
-                        <div class="engine-icon-box"><i class="fa-solid fa-chart-line"></i></div>
-                        <div class="engine-item-content">
-                            <h4>REAL-TIME ANALYTICS</h4>
-                            <p>Latency-free intelligence. Monitor operational KPIs through custom-designed sensory dashboards.</p>
-                        </div>
-                    </div>
-                    <div class="engine-item">
-                        <div class="engine-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div class="engine-item-content">
-                            <h4>ENCRYPTED WORKFLOW</h4>
-                            <p>End-to-end cryptographic protection for all internal and external communication protocols.</p>
-                        </div>
+                    <div class="intel-point fade-up-hook" style="border-left: 3px solid #2dd4bf;">
+                        <h4>Autonomous</h4>
+                        <p>Self-healing supply chains and financial flows.</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Right Graphic Column -->
-            <div class="engine-graphic-col w-full">
-                <div class="engine-mockup">
-                    <div class="mockup-top-bar">
-                        <span class="mock-filename">SYSTEM_OVERVIEW.DAT</span>
-                        <div class="mock-dots">
-                            <span class="dot-m red-m"></span>
-                            <span class="dot-m grey-m"></span>
-                        </div>
-                    </div>
-                    <div class="mockup-process">
-                        <div class="process-line"><div class="line-fill w-60"></div><span class="p-status">RUNNING</span></div>
-                        <div class="process-line"><div class="line-fill w-40"></div><span class="p-status">OPTIMIZED</span></div>
-                    </div>
-                    <div class="mockup-chart">
-                        <div class="bar h-20"></div>
-                        <div class="bar h-40"></div>
-                        <div class="bar h-70"></div>
-                        <div class="bar h-50"></div>
-                        <div class="bar h-90"></div>
-                        <div class="bar h-60"></div>
-                    </div>
-                    <div class="mockup-stats">
-                        <div class="m-stat-box">
-                            <span class="m-stat-label">THROUGHPUT</span>
-                            <span class="m-stat-val">98.4%</span>
-                        </div>
-                        <div class="m-stat-box">
-                            <span class="m-stat-label">NODE_STATUS</span>
-                            <span class="m-stat-val text-white uppercase" style="font-weight:600; font-size: 1.5rem;">ACTIVE</span>
-                        </div>
-                    </div>
+            <!-- Right Illustration Column -->
+            <div class="intel-image-col w-full">
+                <div class="intel-image-wrapper fade-up-hook">
+                    <img src="ai_intelligence.png" alt="Intelligence at the Core" class="intel-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us & Industries -->
-    <section class="dual-section section edge-section bg-alt-2 bg-grid" style="padding-bottom: 2rem;">
-        <div class="container container-split" style="gap: 3rem; align-items: start;">
-            <!-- Why Choose Us -->
-            <div class="why-us w-full">
-                <h2 class="edge-title text-white mb-5" style="font-size: 2.2rem; font-weight: 600;">The Bluefinch Edge</h2>
-                <ul class="edge-list">
-                    <li><i class="fa-regular fa-circle-check text-blue-muted"></i> 99.99% Enterprise-grade Uptime Guarantee</li>
-                    <li><i class="fa-regular fa-circle-check text-blue-muted"></i> Custom Integrations with Legacy Systems</li>
-                    <li><i class="fa-regular fa-circle-check text-blue-muted"></i> End-to-End Encryption & GDPR Compliance</li>
-                    <li class="no-border"><i class="fa-regular fa-circle-check text-blue-muted"></i> Dedicated Account Management Team</li>
-                </ul>
-            </div>
+    <!-- Services & Industries Section (Unified Block) -->
+    <section id="services-overhaul" class="services-overhaul section bg-darker bg-grid" style="padding: 6rem 0 3rem 0; overflow: hidden;">
+        <!-- Animated Gradient Blobs -->
+        <div class="gradient-blobs">
+            <div class="blob b-1"></div>
+            <div class="blob b-2"></div>
+            <div class="blob b-3"></div>
+        </div>
+        
+        <!-- Moving Lines Background -->
+        <div class="moving-lines-bg">
+            <div class="m-line l-1"></div>
+            <div class="m-line l-2"></div>
+            <div class="m-line l-3"></div>
+            <div class="m-line l-4"></div>
+        </div>
 
-            <!-- Industries We Serve -->
-            <div class="industries w-full">
-                <h2 class="edge-title text-white mb-5" style="font-size: 2.2rem; font-weight: 600;">Industries We Serve</h2>
-                <div class="ind-grid">
-                    <div class="ind-card">
-                        <i class="fa-solid fa-industry ind-icon"></i>
-                        <span class="ind-text">MANUFACTURING</span>
-                    </div>
-                    <div class="ind-card">
-                        <i class="fa-solid fa-bag-shopping ind-icon"></i>
-                        <span class="ind-text">RETAIL & COMMERCE</span>
-                    </div>
-                    <div class="ind-card">
-                        <i class="fa-solid fa-building-columns ind-icon"></i>
-                        <span class="ind-text">FINTECH</span>
-                    </div>
-                    <div class="ind-card">
-                        <i class="fa-solid fa-shield-halved ind-icon"></i>
-                        <span class="ind-text">HEALTHCARE</span>
-                    </div>
+        <div class="container container-wide" style="position: relative; z-index: 1;">
+            
+            <!-- Tier 2: Our Services -->
+            <div class="services-header fade-up-hook">
+                <div class="s-header-left">
+                    <span class="s-label" style="color: #3b82f6; letter-spacing: 2px;">PRECISION ENGINEERING</span>
+                    <h2 class="s-title">Our Services</h2>
                 </div>
             </div>
+
+            <div class="services-grid">
+                <div class="s-card fade-up-hook">
+                    <div class="s-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Software Development</h3>
+                    <p>Custom-built applications tailored to your specific operational DNA.</p>
+                </div>
+                <div class="s-card fade-up-hook">
+                    <div class="s-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>ERP Development</h3>
+                    <p>Robust resource planning architectures for enterprise-grade complexity.</p>
+                </div>
+                <div class="s-card fade-up-hook">
+                    <div class="s-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>AI Integration</h3>
+                    <p>Embedding neural networks into existing stacks for intelligent automation.</p>
+                </div>
+                <div class="s-card fade-up-hook">
+                    <div class="s-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Cloud Solutions</h3>
+                    <p>High-availability cloud infrastructure designed for zero-downtime scaling.</p>
+                </div>
+                <div class="s-card fade-up-hook">
+                    <div class="s-icon"><i class="fa-solid fa-chart-area"></i></div>
+                    <h3>Data Migration</h3>
+                    <p>Seamless transition of legacy datasets into modern architectures with zero loss.</p>
+                </div>
+                <div class="s-card fade-up-hook">
+                    <div class="s-icon"><i class="fa-solid fa-shield-alt"></i></div>
+                    <h3>Security Mesh</h3>
+                    <p>Advanced encryption and threat detection built into every layer of code.</p>
+                </div>
+            </div>
+
+            <!-- Tier 3: Industries We Serve -->
+            <div class="industries-overhaul fade-up-hook">
+                <h2 class="ind-title">Industries We Serve</h2>
+                <div class="ind-pill-grid">
+                    <div class="ind-pill">Logistics</div>
+                    <div class="ind-pill">Manufacturing</div>
+                    <div class="ind-pill">FinTech</div>
+                    <div class="ind-pill">Retail</div>
+                    <div class="ind-pill">Healthcare</div>
+                    <div class="ind-pill">Energy</div>
+                    <div class="ind-pill">Construction</div>
+                    <div class="ind-pill">Agriculture</div>
+                    <div class="ind-pill">Education</div>
+                    <div class="ind-pill">Real Estate</div>
+                    <div class="ind-pill">Telecomm</div>
+                    <div class="ind-pill">Public Sector</div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section bg-alt-1 bg-grid" style="padding-top: 3rem;">
-        <div class="container container-split">
-            <div class="contact-info">
-                <div class="section-heading" style="margin-bottom: 2rem;">
-                    <h2 class="section-title">Get in Touch</h2>
-                    <p class="contact-subtitle">Let’s discuss how Bluefinch can build the tailored ERP solution your
-                        business needs.</p>
+    <!-- Final CTA Section -->
+    <section id="cta" class="cta-section section bg-darker" style="padding: 2rem 0 8rem 0;">
+        <div class="container">
+            <div class="cta-card fade-up-hook">
+                <h2 class="cta-headline">Smarter systems create<br>stronger businesses.</h2>
+                <p class="cta-subheadline">Are you ready to transform your enterprise architecture with<br>the logic of the future?</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
                 </div>
-                <div class="contact-methods">
-                    <div class="method">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <h5>Email</h5>
-                            <p>info@bluefinchtech.com</p>
-                        </div>
-                    </div>
-                    <div class="method">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <h5>Phone</h5>
-                            <p>+91 96339 98803</p>
-                        </div>
-                    </div>
-                    <div class="method">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <h5>Location</h5>
-                            <p>Kerala, India</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form-wrapper">
-                <form class="contact-form" action="mailto:info@bluefinchtech.com" method="POST" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                </form>
             </div>
         </div>
     </section>

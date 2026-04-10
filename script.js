@@ -4,21 +4,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Preloader and Initial Body Scroll Lock
     const preloader = document.querySelector('.preloader');
-    document.body.style.overflow = 'hidden'; // Prevents scrolling while loading
+    
+    // Only lock scroll if preloader exists
+    if (preloader) {
+        document.body.style.overflow = 'hidden';
+        
+        setTimeout(() => {
+            preloader.classList.add('loaded');
+            document.body.style.overflow = ''; // Restore scrolling
+        }, 2200);
+    } else {
+        document.body.style.overflow = ''; // Ensure scrolling is enabled
+    }
 
-    // Simulate loading time similar to a luxury theme transition
-    setTimeout(() => {
-        preloader.classList.add('loaded');
-        document.body.style.overflow = ''; // Restore scrolling
-    }, 2200);
-
-    // Navbar Scroll Effect
+    // Navbar Scroll Effect (Throttled for performance)
     const navbar = document.querySelector('.navbar');
+    let scrollTicking = false;
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (!scrollTicking) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                scrollTicking = false;
+            });
+            scrollTicking = true;
         }
     });
 
@@ -45,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Fade up animations on scroll (Intersection Observer)
-    const fadeElements = document.querySelectorAll('.section-heading, .service-card, .features-list li, .check-list li, .tag');
+    const fadeElements = document.querySelectorAll('.section-heading, .service-card, .features-list li, .check-list li, .tag, .fade-up-hook');
     
     // Initial state setup for fade elements
     fadeElements.forEach(el => {
@@ -74,4 +87,39 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => {
         countAnimationObserver.observe(el);
     });
+
+    // Mobile Menu Toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // Close mobile menu on link click
+    if (navLinks) {
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                if (mobileToggle) {
+                    const icon = mobileToggle.querySelector('i');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+                document.body.style.overflow = '';
+            });
+        });
+    }
 });

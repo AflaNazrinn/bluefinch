@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Careers | Bluefinch Intelligence Infrastructure</title>
+    <!-- Tailwind for the core content -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Global Styles for Header/Footer -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#2563eb",
+                        "secondary": "#bfc6db",
+                        "tertiary": "#2563eb",
+                        "surface": "#131314",
+                        "on-surface": "#e5e2e3",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface-container-low": "#1c1b1c",
+                        "surface-container-high": "#2a2a2b"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        .grid-bg {
+            background-image: radial-gradient(circle, rgba(67, 70, 86, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .career-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .career-card:hover {
+            transform: translateY(-8px);
+            background: rgba(37, 99, 235, 0.05);
+            border-color: rgba(37, 99, 235, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Floating Blobs */
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 1;
+            pointer-events: none;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(100px, 50px) scale(1.1); }
+        }
+
+        /* Stagger Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Column Background */
+        .column-bg {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5%;
+            pointer-events: none;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        .bg-col {
+            width: 1px;
+            height: 100%;
+            background: #000;
+        }
+
+        /* Hero Animation Elements */
+        .hero-viz {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .viz-circle {
+            position: absolute;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 50%;
+            animation: spin-slow 15s linear infinite;
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .node {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #2563eb;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #2563eb;
+        }
+        .center-orb {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+            z-index: 2;
+        }
+        .white-node {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #fff;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo_transparent.png" alt="Bluefinch Technology" class="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#hero">Home</a>
+                <a href="about.html">About</a>
+                <a href="careers.html" class="active">Careers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="mobile-toggle">
+                <span class="menu-text uppercase text-[10px] tracking-[0.2em] font-bold opacity-70">Menu</span>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Careers Hero -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-surface-container-lowest">
+        <div class="blob -top-24 -left-24"></div>
+        <div class="blob bottom-0 right-0 opacity-20"></div>
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        
+        <div class="container mx-auto px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full reveal">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        <span class="text-xs font-bold tracking-widest uppercase text-primary">Careers</span>
+                    </div>
+                    <h1 class="text-8xl font-black tracking-tighter leading-none reveal" style="transition-delay: 0.1s">Join Our<br><span class="text-primary">Team.</span></h1>
+                    <p class="text-2xl font-light text-on-surface/60 max-w-2xl leading-relaxed reveal" style="transition-delay: 0.2s">
+                        At Bluefinch, we’re building the future of intelligent software solutions — and we’re looking for passionate, driven individuals to grow with us.
+                    </p>
+                </div>
+
+                <!-- Right Side Animated Elements -->
+                <div class="hidden lg:block reveal" style="transition-delay: 0.4s">
+                    <div class="hero-viz">
+                        <div class="center-orb animate-pulse"></div>
+                        <div class="viz-circle w-96 h-96"></div>
+                        <div class="viz-circle w-72 h-72" style="animation-direction: reverse; animation-duration: 10s"></div>
+                        <div class="viz-circle w-48 h-48" style="animation-duration: 20s"></div>
+                        
+                        <!-- Floating Nodes -->
+                        <div class="node" style="top: 10%; left: 10%; animation: pulse-node 3s infinite"></div>
+                        <div class="node" style="bottom: 20%; right: 15%; animation: pulse-node 4s infinite"></div>
+                        <div class="node" style="top: 50%; right: 5%; animation: pulse-node 5s infinite"></div>
+
+                        <!-- White Contrast Nodes -->
+                        <div class="white-node" style="top: 30%; right: 25%; animation: pulse-node 2.5s infinite"></div>
+                        <div class="white-node" style="bottom: 40%; left: 20%; animation: pulse-node 3.5s infinite"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes pulse-node {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+    </style>
+
+    <!-- Culture Section (Off-White) -->
+    <section class="py-20 bg-[#f2f2f2] text-surface relative overflow-hidden">
+        <!-- Background Columns -->
+        <div class="column-bg">
+            <div class="bg-col"></div>
+            <div class="bg-col"></div>
+            <div class="bg-col"></div>
+            <div class="bg-col"></div>
+            <div class="bg-col"></div>
+        </div>
+        <div class="absolute inset-0 bg-primary/[0.02] grid-bg opacity-20"></div>
+        <!-- Animated Tech Sphere -->
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] animate-pulse"></div>
+
+        <div class="container mx-auto px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6 reveal">
+                    <h2 class="text-5xl font-black tracking-tighter text-surface">Why Innovation Needs You.</h2>
+                    <p class="text-surface/70 text-lg leading-relaxed">
+                        If you love innovation, solving real-world problems, and working with cutting-edge technology, you’ll fit right in. We don't just build software; we build infrastructure for the next generation of global impact.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-surface/5 rounded-xl border border-surface/10 hover:bg-primary/5 transition-colors duration-500">
+                            <i class="fa-solid fa-microchip text-primary text-3xl mb-4"></i>
+                            <h4 class="font-bold text-xl mb-2 text-surface">Impactful Projects</h4>
+                            <p class="text-sm text-surface/50">Work on software that powers global industries.</p>
+                        </div>
+                        <div class="p-6 bg-surface/5 rounded-xl border border-surface/10 hover:bg-primary/5 transition-colors duration-500">
+                            <i class="fa-solid fa-users-rays text-primary text-3xl mb-4"></i>
+                            <h4 class="font-bold text-xl mb-2 text-surface">Growth Environment</h4>
+                            <p class="text-sm text-surface/50">Collaborative culture focused on learning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative reveal" style="transition-delay: 0.3s">
+                    <div class="aspect-square rounded-full border border-primary/10 absolute -inset-12 animate-[spin_20s_linear_infinite]"></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" class="rounded-2xl shadow-2xl relative z-10" alt="Team Work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruitment Process Section -->
+    <section class="py-24 bg-surface relative overflow-hidden">
+        <div class="blob top-1/2 left-0 opacity-30"></div>
+        <div class="container mx-auto px-12 relative z-10">
+            <div class="max-w-4xl mb-16 reveal">
+                <h3 class="text-6xl font-black tracking-tighter uppercase leading-none mb-4">Our Process.</h3>
+                <p class="text-lg text-on-surface/60">How we find the builders of tomorrow.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-4 reveal" style="transition-delay: 0.1s">
+                    <div class="text-5xl font-black text-primary/20">01</div>
+                    <h5 class="font-bold text-xl">Application</h5>
+                    <p class="text-sm text-on-surface/50 leading-relaxed">Send your resume to info@bluefinchtech.com. We review every single one.</p>
+                </div>
+                <div class="space-y-4 reveal" style="transition-delay: 0.2s">
+                    <div class="text-5xl font-black text-primary/20">02</div>
+                    <h5 class="font-bold text-xl">Intro Call</h5>
+                    <p class="text-sm text-on-surface/50 leading-relaxed">A brief chat about your experience, goals, and culture fit at Bluefinch.</p>
+                </div>
+                <div class="space-y-4 reveal" style="transition-delay: 0.3s">
+                    <div class="text-5xl font-black text-primary/20">03</div>
+                    <h5 class="font-bold text-xl">Technical Review</h5>
+                    <p class="text-sm text-on-surface/50 leading-relaxed">Deep dive into your technical stack and problem-solving approach.</p>
+                </div>
+                <div class="space-y-4 reveal" style="transition-delay: 0.4s">
+                    <div class="text-5xl font-black text-primary/20">04</div>
+                    <h5 class="font-bold text-xl">Join the Team</h5>
+                    <p class="text-sm text-on-surface/50 leading-relaxed">Receive your offer and start building the future with us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Openings -->
+    <section class="py-20 bg-surface-container-lowest relative">
+        <div class="container mx-auto px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-8 reveal">
+                <div class="space-y-2">
+                    <h3 class="text-5xl font-black tracking-tighter">Current Openings.</h3>
+                    <p class="text-lg text-on-surface/50">Find your place in the architecture of the future.</p>
+                </div>
+                <div class="px-6 py-2 bg-white/5 rounded-full text-sm font-bold border border-white/10 uppercase tracking-widest">
+                    4 Active Roles
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 reveal" style="transition-delay: 0.2s">
+                <!-- Software Architect -->
+                <div class="career-card p-10 bg-surface-container-low rounded-2xl relative group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-primary/10 rounded-xl">
+                            <i class="fa-solid fa-layer-group text-primary text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface/30">Experience: 4+ Years</span>
+                    </div>
+                    <h4 class="text-2xl font-black mb-3">Software Architect</h4>
+                    <p class="text-on-surface/60 mb-6 leading-relaxed text-sm">
+                        Design and oversee scalable, high-performance systems. Play a key role in defining architecture and guiding the development team.
+                    </p>
+                    <a href="mailto:info@bluefinchtech.com" class="text-primary font-bold text-xs uppercase tracking-widest hover:underline underline-offset-4">
+                        Apply: info@bluefinchtech.com
+                    </a>
+                </div>
+
+                <!-- Designer -->
+                <div class="career-card p-10 bg-surface-container-low rounded-2xl relative group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-primary/10 rounded-xl">
+                            <i class="fa-solid fa-palette text-primary text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface/30">Experience: 3+ Years</span>
+                    </div>
+                    <h4 class="text-2xl font-black mb-3">Designer</h4>
+                    <p class="text-on-surface/60 mb-6 leading-relaxed text-sm">
+                        Creative designer with a strong eye for detail and user experience. Design intuitive and visually appealing interfaces for our products.
+                    </p>
+                    <a href="mailto:info@bluefinchtech.com" class="text-primary font-bold text-xs uppercase tracking-widest hover:underline underline-offset-4">
+                        Apply: info@bluefinchtech.com
+                    </a>
+                </div>
+
+                <!-- Python Developer (AI) -->
+                <div class="career-card p-10 bg-surface-container-low rounded-2xl relative group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-primary/10 rounded-xl">
+                            <i class="fa-solid fa-brain text-primary text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface/30">Experience: 2+ Years</span>
+                    </div>
+                    <h4 class="text-2xl font-black mb-3">Python Developer (AI)</h4>
+                    <p class="text-on-surface/60 mb-6 leading-relaxed text-sm">
+                        Join our AI team to build intelligent solutions using Python. Work on automation and AI-powered features for business efficiency.
+                    </p>
+                    <a href="mailto:info@bluefinchtech.com" class="text-primary font-bold text-xs uppercase tracking-widest hover:underline underline-offset-4">
+                        Apply: info@bluefinchtech.com
+                    </a>
+                </div>
+
+                <!-- React Developer -->
+                <div class="career-card p-10 bg-surface-container-low rounded-2xl relative group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-primary/10 rounded-xl">
+                            <i class="fa-brands fa-react text-primary text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface/30">Experience: 2+ Years</span>
+                    </div>
+                    <h4 class="text-2xl font-black mb-3">React Developer</h4>
+                    <p class="text-on-surface/60 mb-6 leading-relaxed text-sm">
+                        Build modern, responsive, and high-performance web applications with seamless user experiences.
+                    </p>
+                    <a href="mailto:info@bluefinchtech.com" class="text-primary font-bold text-xs uppercase tracking-widest hover:underline underline-offset-4">
+                        Apply: info@bluefinchtech.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us (Values) -->
+    <section class="py-20 bg-surface relative">
+        <div class="container mx-auto px-12">
+            <div class="max-w-4xl mx-auto text-center space-y-4 mb-20">
+                <h3 class="text-6xl font-black tracking-tighter uppercase leading-none">Values & growth.</h3>
+                <p class="text-lg text-on-surface/60">We invest in the people who build the future.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="text-4xl text-primary mb-4"><i class="fa-solid fa-rocket"></i></div>
+                    <h5 class="font-bold">Innovative Projects</h5>
+                    <p class="text-sm text-on-surface/50 leading-relaxed">Pushing boundaries with next-gen ERP tech.</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="text-4xl text-primary mb-4"><i class="fa-solid fa-code-merge"></i></div>
+                    <h5 class="font-bold">Collaborative Stack</h5>
+                    <p class="text-sm text-on-surface/50 leading-relaxed">Modern technologies and shared knowledge.</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="text-4xl text-primary mb-4"><i class="fa-solid fa-users-gear"></i></div>
+                    <h5 class="font-bold">Career Growth</h5>
+                    <p class="text-sm text-on-surface/50 leading-relaxed">Direct mentorship and leadership paths.</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="text-4xl text-primary mb-4"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h5 class="font-bold">Learning Focus</h5>
+                    <p class="text-sm text-on-surface/50 leading-relaxed">Regular workshops and skill development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply CTA -->
+    <section class="py-20 bg-surface-container-lowest relative overflow-hidden">
+        <div class="absolute left-0 top-0 w-1/3 h-full bg-primary/5 blur-3xl rounded-full translate-x--1/2"></div>
+        <div class="container mx-auto px-12 relative z-10">
+            <div class="bg-primary/5 border border-primary/20 rounded-[3rem] p-16 text-center space-y-10">
+                <h2 class="text-6xl font-black tracking-tighter leading-none">Ready to be part of something exciting?</h2>
+                <div class="space-y-2">
+                    <p class="text-lg text-on-surface/50 uppercase tracking-widest font-bold">Send your resume to:</p>
+                    <a href="mailto:info@bluefinchtech.com" class="text-3xl text-primary font-black hover:underline underline-offset-8">info@bluefinchtech.com</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <div class="copyright">
+                &copy; <span id="year">2026</span> Bluefinch. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Intersection Observer for Reveal Animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Force header background on scroll
+        const toggleNavBackground = () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('scrolled');
+                nav.style.setProperty('background-color', '#000000', 'important');
+            } else {
+                nav.classList.remove('scrolled');
+                nav.style.setProperty('background-color', 'transparent', 'important');
+            }
+        };
+        window.addEventListener('scroll', toggleNavBackground);
+        window.addEventListener('load', toggleNavBackground);
+    </script>
+</body>
+</html>
